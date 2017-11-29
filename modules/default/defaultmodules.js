@@ -16,7 +16,10 @@ var defaultModules = [
 	"helloworld",
 	"newsfeed",
 	"weatherforecast",
-	"updatenotification"
+	"updatenotification",
+	"MMM-GoogleAssistant",
+	"MMM-MyCommute",
+	"MMM-Remote-Control"
 ];
 
 /*************** DO NOT EDIT THE LINE BELOW ***************/

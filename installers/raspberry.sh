@@ -90,25 +90,25 @@ fi
 
 # Install MagicMirror
 cd ~
-if [ -d "$HOME/MagicMirror" ] ; then
+if [ -d "$HOME/OperatingSystemErise" ] ; then
 	echo -e "\e[93mIt seems like MagicMirror is already installed."
 	echo -e "To prevent overwriting, the installer will be aborted."
-	echo -e "Please rename the \e[1m~/MagicMirror\e[0m\e[93m folder and try again.\e[0m"
+	echo -e "Please rename the \e[1m~/OperatingSystemErise\e[0m\e[93m folder and try again.\e[0m"
 	echo ""
-	echo -e "If you want to upgrade your installation run \e[1m\e[97mgit pull\e[0m from the ~/MagicMirror directory."
+	echo -e "If you want to upgrade your installation run \e[1m\e[97mgit pull\e[0m from the ~/OperatingSystemErise directory."
 	echo ""
 	exit;
 fi
 
 echo -e "\e[96mCloning MagicMirror ...\e[90m"
-if git clone https://github.com/MichMich/MagicMirror.git; then 
+if git clone https://github.com/vangoeye1502/OperatingSystemErise.git; then
 	echo -e "\e[92mCloning MagicMirror Done!\e[0m"
 else
 	echo -e "\e[91mUnable to clone MagicMirror."
 	exit;
 fi
 
-cd ~/MagicMirror  || exit
+cd ~/OperatingSystemErise  || exit
 echo -e "\e[96mInstalling dependencies ...\e[90m"
 if npm install; then 
 	echo -e "\e[92mDependencies installation Done!\e[0m"
@@ -117,7 +117,7 @@ else
 	exit;
 fi
 
-cd ~/MagicMirror/modules/MMM-GoogleAssistant  || exit
+cd ~/OperatingSystemErise/modules/MMM-GoogleAssistant  || exit
 echo -e "\e[96mInstalling dependencies ...\e[90m"
 if npm install; then
 echo -e "\e[92mDependencies installation Done!\e[0m"
@@ -126,7 +126,7 @@ echo -e "\e[91mUnable to install dependencies!"
 exit;
 fi
 
-cd ~/MagicMirror/modules/MMM-MyCommute  || exit
+cd ~/OperatingSystemErise/modules/MMM-MyCommute  || exit
 echo -e "\e[96mInstalling dependencies ...\e[90m"
 if npm install; then
 echo -e "\e[92mDependencies installation Done!\e[0m"
@@ -135,7 +135,7 @@ echo -e "\e[91mUnable to install dependencies!"
 exit;
 fi
 
-cd ~/MagicMirror/modules/MMM-Remote-Control  || exit
+cd ~/OperatingSystemErise/modules/MMM-Remote-Control  || exit
 echo -e "\e[96mInstalling dependencies ...\e[90m"
 if npm install; then
 echo -e "\e[92mDependencies installation Done!\e[0m"
@@ -158,7 +158,7 @@ if command_exists plymouth; then
 			sudo mkdir $THEME_DIR/MagicMirror
 		fi
 
-		if sudo cp ~/MagicMirror/splashscreen/splash.png $THEME_DIR/MagicMirror/splash.png && sudo cp ~/MagicMirror/splashscreen/MagicMirror.plymouth $THEME_DIR/MagicMirror/MagicMirror.plymouth && sudo cp ~/MagicMirror/splashscreen/MagicMirror.script $THEME_DIR/MagicMirror/MagicMirror.script; then
+		if sudo cp ~/OperatingSystemErise/splashscreen/splash.png $THEME_DIR/MagicMirror/splash.png && sudo cp ~/OperatingSystemErise/splashscreen/MagicMirror.plymouth $THEME_DIR/MagicMirror/MagicMirror.plymouth && sudo cp ~/OperatingSystemErise/splashscreen/MagicMirror.script $THEME_DIR/MagicMirror/MagicMirror.script; then
 			echo -e "\e[90mSplashscreen: Theme copied successfully.\e[0m"
 			if sudo plymouth-set-default-theme -R MagicMirror; then
 				echo -e "\e[92mSplashscreen: Changed theme to MagicMirror successfully.\e[0m"
@@ -180,7 +180,7 @@ read -p "Do you want use pm2 for auto starting of your MagicMirror (y/n)?" choic
 if [[ $choice =~ ^[Yy]$ ]]; then
     sudo npm install -g pm2
     sudo su -c "env PATH=$PATH:/usr/bin pm2 startup linux -u pi --hp /home/pi"
-    pm2 start ~/MagicMirror/installers/pm2_MagicMirror.json
+    pm2 start ~/OperatingSystemErise/installers/pm2_MagicMirror.json
     pm2 save
 fi
 
