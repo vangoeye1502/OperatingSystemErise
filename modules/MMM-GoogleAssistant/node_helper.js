@@ -51,7 +51,7 @@ module.exports = NodeHelper.create({
     });
 
       self.sendSocketNotification('INITIALIZATION_COMPLETED',null);
-      console.log("INITIALIZATION_COMPLETED);
+      console.log("INITIALIZATION_COMPLETED");
   },
 
   socketNotificationReceived: function(notification, payload) {
