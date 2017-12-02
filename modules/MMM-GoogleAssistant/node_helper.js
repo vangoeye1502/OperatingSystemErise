@@ -28,7 +28,8 @@ module.exports = NodeHelper.create({
         }
       },
       message: function(message) {
-        if (message.message === 'ON_CONVERSATION_TURN_STARTED') {
+          console.log("MESSAGE DETECTED");
+          if (message.message === 'ON_CONVERSATION_TURN_STARTED') {
           self.sendSocketNotification('ON_CONVERSATION_TURN_STARTED', null);
         } else if (message.message === 'ON_CONVERSATION_TURN_FINISHED') {
           self.sendSocketNotification('ON_CONVERSATION_TURN_FINISHED', null);
