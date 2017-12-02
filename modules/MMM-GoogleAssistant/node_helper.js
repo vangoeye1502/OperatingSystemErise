@@ -17,7 +17,7 @@ module.exports = NodeHelper.create({
       //publishKey,subscribeKey,secretKey
         publishKey: 'pub-c-b7f324ac-e190-4bcf-ba5e-b860168f6f9b',
         subscribeKey: 'sub-c-f97a2b14-b03f-11e7-8d4b-66b981d3b880',
-        secretKey: 'sec-c-YjQ1ZDQwYzktYTY4YS00OWY0LWIzNDUtYTlkNjI4YTIxNDBj',
+        //secretKey: 'sec-c-YjQ1ZDQwYzktYTY4YS00OWY0LWIzNDUtYTlkNjI4YTIxNDBj',
 
     });
 

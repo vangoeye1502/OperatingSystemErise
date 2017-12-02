@@ -78,7 +78,6 @@ def init_pubnub():
     pnconfig = PNConfiguration()
     pnconfig.subscribe_key = 'sub-c-f97a2b14-b03f-11e7-8d4b-66b981d3b880'
     pnconfig.publish_key = 'pub-c-b7f324ac-e190-4bcf-ba5e-b860168f6f9b'
-    pnconfig.secret_key = 'sec-c-YjQ1ZDQwYzktYTY4YS00OWY0LWIzNDUtYTlkNjI4YTIxNDBj'
     pubnub = PubNub(pnconfig)
     pubnub.add_listener(MySubscribeCallback())
     pubnub.subscribe().channels('magicmirror').execute()
