@@ -108,8 +108,8 @@ else
 	exit;
 fi
 
-cd ~/OperatingSystemErise  || exit
-echo -e "\e[96mInstalling dependencies ...\e[90m"
+cd ~/OperatingSystemErise
+echo -e "\e[96mInstalling dependencies eriseOS ...\e[90m"
 if npm install; then 
 	echo -e "\e[92mDependencies installation Done!\e[0m"
 else
@@ -117,8 +117,8 @@ else
 	exit;
 fi
 
-cd ~/OperatingSystemErise/modules/MMM-GoogleAssistant  || exit
-echo -e "\e[96mInstalling dependencies ...\e[90m"
+cd ~/OperatingSystemErise/modules/MMM-GoogleAssistant
+echo -e "\e[96mInstalling dependencies MMM-GoogleAssistant ...\e[90m"
 if npm install; then
 echo -e "\e[92mDependencies installation Done!\e[0m"
 else
@@ -126,8 +126,8 @@ echo -e "\e[91mUnable to install dependencies!"
 exit;
 fi
 
-cd ~/OperatingSystemErise/modules/MMM-MyCommute  || exit
-echo -e "\e[96mInstalling dependencies ...\e[90m"
+cd ~/OperatingSystemErise/modules/MMM-MyCommute
+echo -e "\e[96mInstalling dependencies MMM-MyCommute ...\e[90m"
 if npm install; then
 echo -e "\e[92mDependencies installation Done!\e[0m"
 else
@@ -135,8 +135,8 @@ echo -e "\e[91mUnable to install dependencies!"
 exit;
 fi
 
-cd ~/OperatingSystemErise/modules/MMM-Remote-Control  || exit
-echo -e "\e[96mInstalling dependencies ...\e[90m"
+cd ~/OperatingSystemErise/modules/MMM-Remote-Control
+echo -e "\e[96mInstalling dependencies MMM-Remote-control ...\e[90m"
 if npm install; then
 echo -e "\e[92mDependencies installation Done!\e[0m"
 else
