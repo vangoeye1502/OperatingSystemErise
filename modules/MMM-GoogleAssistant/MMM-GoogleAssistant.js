@@ -60,7 +60,9 @@ Module.register("MMM-GoogleAssistant", {
         this.assistantActive = true;
     } else if (notification == 'COMMAND_FOR_MIRROR') {
         var pl = JSON.parse(payload);
-        this.sendNotification('REMOTE_ACTION', {action: 'BRIGHTNESS', value: pl.value});
+        //this.sendNotification('REMOTE_ACTION', {action: 'BRIGHTNESS', value: pl.value});
+        this.sendNotification('REMOTE_ACTION', {action: 'MONITOROFF'});
+
     }
     this.updateDom(500);
   },
