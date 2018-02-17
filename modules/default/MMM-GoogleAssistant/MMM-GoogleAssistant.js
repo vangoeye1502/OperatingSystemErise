@@ -37,7 +37,7 @@ Module.register("MMM-GoogleAssistant", {
             "  <div class=\"sk-cube2 sk-cube\"></div>\n" +
             "  <div class=\"sk-cube4 sk-cube\"></div>\n" +
             "  <div class=\"sk-cube3 sk-cube\"></div>\n" +
-            "</div><br/>" + "LISTENING";
+            "</div><br/>" + "BEZIG MET LUISTEREN";
       }
 
     } else {

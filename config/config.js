@@ -98,7 +98,7 @@ var config = {
 		},*/
         {
             module: "MMM-GoogleAssistant",
-            position: "lower_third",
+            position: "middle_center",
             config: {
                 maxWidth: "100%",
                 header: ""

@@ -21,13 +21,7 @@ Module.register("MMM-GoogleAssistant", {
     this.assistantActive = false;
     this.processing = false;
     this.userQuery = null;
-    this.refreshBoolean = true;
     this.sendSocketNotification('INIT', 'handshake');
-
-      var self = this;
-      setInterval(function() {
-          self.updateDom(750);
-      }, 10000);
   },
 
   getDom: function() {
@@ -44,14 +38,7 @@ Module.register("MMM-GoogleAssistant", {
             "  <div class=\"sk-cube4 sk-cube\"></div>\n" +
             "  <div class=\"sk-cube3 sk-cube\"></div>\n" +
             "</div><br/>" + "LISTENING";*/
-        if(this.refreshBoolean) {
-            wrapper.innerHTML = "<img src='modules/MMM-GoogleAssistant/image1.gif' style='width: 200px;' /><br/>" + "Waar kan ik mee helpen?";
-            this.refreshBoolean = false;
-        }
-        else {
-            wrapper.innerHTML = "<img src='modules/MMM-GoogleAssistant/logo_wit.png' style='width: 200px;' /><br/>" + "www.erise.be";
-            this.refreshBoolean = true;
-        }
+          wrapper.innerHTML = "<img src='modules/MMM-GoogleAssistant/image1.gif' style='width: 200px;' /><br/>" + "Waar kan ik mee helpen?";
       }
 
     } else {
